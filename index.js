@@ -1,11 +1,11 @@
 const scrollElt = document.querySelector(".scroll");
+const hamburgerContainerElt = document.querySelector(".hamburger-container");
 const hamburgerElt = document.querySelector(".hamburger");
+const navItems = document.querySelector(".navItems");
 
-console.log(hamburgerElt);
-
-hamburgerElt.addEventListener("click", (e) => {
+hamburgerContainerElt.addEventListener("click", (e) => {
   hamburgerElt.classList.toggle("active");
-  console.log("clicked");
+  navItems.classList.toggle("active");
 });
 
 scrollElt.addEventListener("click", (e) => {
