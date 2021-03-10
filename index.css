@@ -1,370 +1,368 @@
-@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	scroll-behavior: smooth;
 }
 
 h1 {
-  font-family: "Abril Fatface", cursive;
-  font-weight: 400;
+	font-family: 'Abril Fatface', cursive;
+	font-weight: 400;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
-  font-family: inherit;
-  position: relative;
+	color: inherit;
+	text-decoration: none;
+	font-family: inherit;
+	position: relative;
 }
 
 a::before {
-  content: "";
-  width: 0;
-  height: 2px;
-  background-color: #fff;
-  position: absolute;
-  bottom: -0.3rem;
-  transition: width 100ms ease-out;
-  border-radius: 100rem;
+	content: '';
+	width: 0;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -0.3rem;
+	transition: width 100ms ease-out;
+	border-radius: 100rem;
 }
 
 a:hover::before {
-  width: 100%;
+	width: 100%;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 .container {
-  max-width: 112.5rem;
-  width: 90%;
-  margin: 0 auto;
+	max-width: 112.5rem;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .bg {
-  background: url(../images/bg.jpg) center center;
+	background: url(../images/bg.jpg) center center;
 }
 
 .header {
-  overflow: hidden;
-  min-height: 100vh;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	overflow: hidden;
+	min-height: 100vh;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .navBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .logo {
-  width: 14.4rem;
-  height: 8.1rem;
+	width: 14.4rem;
+	height: 8.1rem;
 }
 
 .logo img {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .hamburger-container {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  right: 1rem;
-  z-index: 1;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 1rem;
+	z-index: 1;
 }
 
 .hamburger::after,
 .hamburger::before,
 .hamburger {
-  width: 2.2rem;
-  height: 0.3125rem;
-  background-color: #fff;
-  border-radius: 75rem;
-  position: relative;
-  cursor: pointer;
-  transition: transform 100ms ease-in-out;
+	width: 2.2rem;
+	height: 0.3125rem;
+	background-color: #fff;
+	border-radius: 75rem;
+	position: relative;
+	cursor: pointer;
+	transition: transform 100ms ease-in-out;
 }
 
 .hamburger::after,
 .hamburger::before {
-  content: "";
-  position: absolute;
+	content: '';
+	position: absolute;
 }
 
 .hamburger::before {
-  top: -10px;
+	top: -10px;
 }
 
 .hamburger::after {
-  bottom: -10px;
-  transition: left 100ms ease-in;
+	bottom: -10px;
+	transition: left 100ms ease-in;
 }
 
 .hamburger.active::after {
-  display: none;
+	display: none;
 }
 
 .hamburger.active {
-  transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .hamburger.active::before {
-  transform: rotate(-90deg) translateX(-0.7rem);
+	transform: rotate(-90deg) translateX(-0.7rem);
 }
 
 .navItems.active {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  right: 1rem;
-  top: 6rem;
-  background-color: #607748;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border-top-right-radius: 0;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 1rem;
+	top: 6rem;
+	background-color: #607748;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	border-top-right-radius: 0;
 }
 
 .navItems.active::before {
-  content: "";
-  width: 50px;
-  height: 60px;
-  background-color: inherit;
-  position: absolute;
-  top: -60px;
-  right: 0;
+	content: '';
+	width: 50px;
+	height: 60px;
+	background-color: inherit;
+	position: absolute;
+	top: -60px;
+	right: 0;
 }
 
 .navItems {
-  display: none;
-  font-weight: bold;
+	display: none;
+	font-weight: bold;
 }
 
 .navItem:not(:last-of-type) {
-  margin-right: 2.5rem;
+	margin-right: 2.5rem;
 }
 
 .headerTitle {
-  font-size: 3.5rem;
-  letter-spacing: 0.1rem;
+	font-size: 3.5rem;
+	letter-spacing: 0.1rem;
 }
 
 .scroll {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 2rem;
-  font-weight: 500;
-  width: 4.375rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 2rem;
+	font-weight: 500;
+	width: 4.375rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
 }
 
 .scroll a::before {
-  content: none;
+	content: none;
 }
 
 .scroll svg {
-  font-weight: normal;
+	font-weight: normal;
 }
 
 .features {
-  display: flex;
-  flex-direction: column;
-  margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	margin-top: 5rem;
 }
 
 .feature {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .feature:not(:first-child) {
-  margin-top: 4rem;
+	margin-top: 4rem;
 }
 
 .feature svg {
-  color: #add981;
-  font-size: 5rem;
+	color: #add981;
+	font-size: 5rem;
 }
 
 .label {
-  text-align: center;
-  margin-top: 1rem;
-  font-weight: bold;
+	text-align: center;
+	margin-top: 1rem;
+	font-weight: bold;
 }
 
 .bestSeller,
 .plants {
-  margin-top: 5rem;
+	margin-top: 5rem;
 }
 
 button {
-  background-color: #add981;
-  color: #fff;
-  border: none;
-  border-radius: 90rem;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  cursor: pointer;
+	background-color: #add981;
+	color: #fff;
+	border: none;
+	border-radius: 90rem;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	cursor: pointer;
 }
 
 button:hover {
-  background-color: #607748;
+	background-color: #607748;
 }
 
 .sectionTitle {
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-  margin-bottom: 2rem;
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	margin-bottom: 2rem;
 }
 
 .sectionTitle::first-letter {
-  text-decoration: underline;
-  text-decoration-color: #add981;
-  text-decoration-thickness: 0.7rem;
+	text-decoration: underline;
+	text-decoration-color: #add981;
+	text-decoration-thickness: 0.7rem;
 }
 
 .bestSellerItems,
 .plantsItems {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 1rem;
 }
 
 .item {
-  position: relative;
-  margin-bottom: 2rem;
+	position: relative;
+	margin-bottom: 2rem;
 }
 
 .item img {
-  width: 100%;
+	width: 100%;
 }
 
 .itemInfo {
-  background-color: #ebebebdf;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 5rem;
-  padding: 1rem;
+	background-color: #ebebebdf;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 5rem;
+	padding: 1rem;
 }
 
 .price {
-  height: 100%;
+	height: 100%;
 }
 
 .type {
-  font-weight: bold;
-  margin-bottom: 0.1rem;
+	font-weight: bold;
+	margin-bottom: 0.1rem;
 }
 
 .price small {
-  color: #607748;
-  font-weight: bold;
+	color: #607748;
+	font-weight: bold;
 }
 
 .footer {
-  margin-top: 8rem;
-  margin-bottom: 4rem;
-  text-align: center;
-  font-weight: 600;
+	margin-top: 8rem;
+	margin-bottom: 4rem;
+	text-align: center;
+	font-weight: 600;
 }
 
 @media only screen and (min-width: 750px) {
-  .headerTitle {
-    font-size: 4.5rem;
-  }
+	.headerTitle {
+		font-size: 4.5rem;
+	}
 
-  .features {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+	.features {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
 
-  .feature:not(:first-child) {
-    margin-top: 0;
-  }
+	.feature:not(:first-child) {
+		margin-top: 0;
+	}
 
-  .footer {
-    display: flex;
-    justify-content: space-between;
-  }
+	.footer {
+		display: flex;
+		justify-content: space-between;
+	}
 }
 
 @media only screen and (min-width: 812px) {
-  .navBar {
-    justify-content: flex-start;
-  }
+	.navBar {
+		justify-content: flex-start;
+	}
 
-  .logo {
-    margin-right: 5rem;
-  }
+	.logo {
+		margin-right: 5rem;
+	}
 
-  .hamburger {
-    display: none;
-  }
+	.hamburger {
+		display: none;
+	}
 
-  .navItems {
-    display: flex;
-  }
+	.navItems {
+		display: flex;
+	}
 
-  .features {
-    padding: 5rem;
-  }
+	.features {
+		padding: 5rem;
+	}
 
-  .itemImg {
-    height: 100%;
-  }
+	.itemImg {
+		height: 100%;
+	}
 
-  .item img {
-    height: 100%;
-  }
+	.item img {
+		height: 100%;
+	}
 }
 
 @media only screen and (min-width: 1210px) {
-  .plantsItems {
-    grid-template-columns: none;
-    grid-template-areas:
-      "gHd gHd gSb gSb"
-      "gHd gHd gSb1 gSb1"
-      "gFo gMa gMa gFo1";
-  }
+	.plantsItems {
+		grid-template-columns: none;
+		grid-template-areas:
+			'gHd gHd gSb gSb'
+			'gHd gHd gSb1 gSb1'
+			'gFo gMa gMa gFo1';
+	}
 
-  .gHd {
-    grid-area: gHd;
-  }
-  .gSb1 {
-    grid-area: gSb1;
-  }
-  .gSb {
-    grid-area: gSb;
-  }
-  .gMa {
-    grid-area: gMa;
-  }
+	.gHd {
+		grid-area: gHd;
+	}
+	.gSb1 {
+		grid-area: gSb1;
+	}
+	.gSb {
+		grid-area: gSb;
+	}
+	.gMa {
+		grid-area: gMa;
+	}
 
-  .gFo {
-    grid-area: gFo;
-  }
-  .gFo1 {
-    grid-area: gFo1;
-  }
+	.gFo {
+		grid-area: gFo;
+	}
+	.gFo1 {
+		grid-area: gFo1;
+	}
 }
